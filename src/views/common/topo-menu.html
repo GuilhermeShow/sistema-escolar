@@ -1,0 +1,15 @@
+<header class="container_header">
+    <ul>
+        <?php if($_SESSION["professor"]):?>
+            <li><a href="/area-do-professor">Área do professor</a></li>
+        <?php endif?>
+        <?php if(isset($_SESSION["logado"])) {?>
+            <li><a href="/sair">sair</a></li>
+        <?php }else {?>
+            <li><a href="">Como funciona</a></li>
+            <li><a href="/matricular">Matricule-se</a></li>
+            <li><a href="/login">entrar</a></li>
+            <?php }?>
+        
+    </ul>
+</header>

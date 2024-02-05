@@ -1,0 +1,17 @@
+<main>
+    <form method="post" action="/matricular">
+        <label for="firstName">Nome:</label>
+        <input type="text" id="firstName" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="senha" required>
+
+        <p style="color: red;"><?= $erro?></p>
+        <p style="color: green;"><?= $sucess?></p>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</main>

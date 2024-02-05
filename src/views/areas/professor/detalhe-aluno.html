@@ -1,0 +1,76 @@
+
+<main class="admin-main">
+    <section class="admin-section">
+        <div class="prof_boletin">
+            <h2>Boletin do aluno: <?= $dado[0]["nome"]?></h2><br>
+            <h3><a href="/area-do-professor">Voltar</a></h3>
+        </div>
+        <h3>1° semestre</h3>
+        
+
+        <table>
+        <thead>
+            <tr>
+                <th>Materia 1</th>
+                <th>Materia 2</th>
+                <th>Materia 3</th>
+                <th>Materia 4</th>
+                <th>Média</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr id="criar">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+
+          
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table><br>
+    <button id="add">Adicionar nota</button>
+    <div id="form"></div>
+        </section>
+</main>
+
+<script>
+
+    const add = document.getElementById("add");
+    const form = document.getElementById("form");
+
+    add.addEventListener("click", () => {
+        form.innerHTML = `
+        <main>
+            <form method="post" action="/detalhe-aluno?aluno=<?= $id?>">
+                <label for="firstName">Nome:</label>
+                <input type="text" id="firstName" value="<?= $dado["nome"]?>" name="nome" required>
+
+                <label for="email">Materia 1:</label>
+                <input type="number" id="email" name="s1" required>
+
+                <label for="email">Materia 2:</label>
+                <input type="number" id="email" name="s2" required>
+                
+                <label for="email">Materia 3:</label>
+                <input type="number" id="email" name="s3" required>
+                
+                <label for="email">Materia 4:</label>
+                <input type="number" id="email" name="s4" required>
+
+             
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </main>
+        `;
+
+        add.innerText = "Fechar";
+    })
+
+
+</script>

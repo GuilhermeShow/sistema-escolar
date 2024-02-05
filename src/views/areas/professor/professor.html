@@ -1,0 +1,39 @@
+<!-- <header class="admin-header">
+    <h1>Admin Dashboard</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+</header> -->
+
+<main class="admin-main">
+    <section class="admin-section">
+        <h2>Bem vindo professor <?= $_SESSION["professor"]["nome"]?>!</h2>
+        <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Detalhes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($dado as $dados):?>
+            <tr>
+                <td><?= $dados["nome"]?></td>
+                <td><?= $dados["email"]?></td>
+                <td><?= $dados["role"]?></td>
+                <td><a href="/detalhe-aluno?aluno=<?= $dados["id"]?>">Detalhes</a></td>
+            </tr>
+            <?php endforeach?>
+          
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+    </section>
+</main>

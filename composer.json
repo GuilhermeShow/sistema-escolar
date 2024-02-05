@@ -1,0 +1,15 @@
+{
+    "name": "tecnologia_web/php",
+    "autoload": {
+        "psr-4": {
+            "TecnologiaWeb\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "guilherme silva",
+            "email": "guiidevshow@gmail.com"
+        }
+    ],
+    "require": {}
+}
